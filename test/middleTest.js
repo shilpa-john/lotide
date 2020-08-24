@@ -1,8 +1,25 @@
-const middlefc          = require('../middle'); 
-const assertArraysEqual = require('../assertArraysEqual');
+const assert      = require('chai').assert;
+const middlefc        = require('../middle');
 
 
-assertArraysEqual(middlefc([1,2,3,4,5,6,7]), [4]);
-assertArraysEqual(middlefc([1,2,3,4,5,6,7,8]), [4,5]);
-assertArraysEqual(middlefc([1, 2, 3]) ,[2]);
-assertArraysEqual(middlefc([3, 4, 5]), [4,5,6]);
+describe("#middle", () => {
+  it('Should return [2] when given [1, 2, 3]', () => {
+    assert.deepEqual(middlefc([1, 2, 3]), [2]);
+  });
+
+  it('Should return [3] when given [1, 2, 3, 4, 5]', () => {
+    assert.deepEqual(middlefc([1, 2, 3, 4, 5]), [3]);
+  });
+
+  it('Should return [3, 4] when given [1, 2, 3, 4, 5, 6]', () => {
+    assert.deepEqual(middlefc([1, 2, 3, 4, 5, 6]), [3, 4]);
+  });
+
+  it('Should return [] when given [1]', () => {
+    assert.deepEqual(middlefc([1]), []);
+  });
+
+  it('Should return [] when given [1, 2]', () => {
+    assert.deepEqual(middlefc([1, 2]), []);
+  });
+});
