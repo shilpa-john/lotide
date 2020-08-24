@@ -28,5 +28,7 @@ function countLetters(inputString)
   console.log(countedLetters);
   return countedLetters;
 }
-countLetters("lighthouse in the house");
-countLetters("Shilpa Chegudi");
+module.exports = countLetters;
+
+//countLetters("lighthouse in the house");
+//countLetters("Shilpa Chegudi");
