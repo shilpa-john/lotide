@@ -1,24 +1,23 @@
 //const assertEqual = require('./assertEqual');
-const assertEqual = function(actual, expected) {
+/*const assertEqual = function(actual, expected) {
   if (actual === expected)
     return console.log(`👍👍👍Assertion Passed: ${actual} === ${expected}`);
   else
     return console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-};
+};*/
 
 
-const eqArrays = assertEqual;
-function assertArraysEqual (array1, array2)
- {
-  if (eqArrays(array1, array2))
-   {
-    return console.log(`👍👍👍Array Assertion Passed: ${array1} equals ${array2}`);
-  } 
-  else 
-  {
-    return console.log(`🛑🛑🛑Array Assertion Failed: ${array1} does not equal ${array2}`);
+const assertArraysEqual = function(arr1, arr2) {
+  for(i = 0; i < arr1.length; i++){
+    for(j = i; j <= i; j++){
+      if(arr1[i] !== arr2[j]){
+        return console.log("🙁" + `Assertion Failed: [${arr1}] !== [${arr2}]`)
+        
+      }
+    }
   }
-}
+  return console.log("😀" + `Assertion Passed: [${arr1}] === [${arr2}]`);
+};
 
 
 function middlefc(inputArray)
@@ -53,4 +52,4 @@ console.log(middlefc([1])) // => []
 console.log(middlefc([1, 2])) // => []
 console.log(middlefc([1, 2, 3])) // => [2]
 console.log(middlefc([1, 2, 3, 4, 5])) // => [3]
-console.log(assertArraysEqual(middlefc([1, 2, 3, 4, 5, 6]), [3, 4]));
+console.log(assertArraysEqual(middlefc([1, 2, 3, 4]), [2, 3]))
