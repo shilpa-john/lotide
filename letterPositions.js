@@ -14,8 +14,6 @@ const assertArraysEqual = function(arr1, arr2)
   return console.log("😀" + `Assertion Passed: [${arr1}] === [${arr2}]`);
 };
 
-
-
 const letterPositions = function(sentence)
  {
   const results = {};
@@ -39,10 +37,8 @@ const letterPositions = function(sentence)
   return results;
 };
 
+//Test
 const sentence = "hello";
-
 const resultObject = letterPositions(sentence);
-
 assertArraysEqual(resultObject["h"], [0]);
-
 assertArraysEqual(resultObject["e"], [1]);
