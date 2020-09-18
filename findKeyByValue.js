@@ -16,7 +16,7 @@ const findKeyByValue = function(showsTable, show)
     {
       showGenre = genre;
     }
-  }
+}
   console.log(showGenre);
   return showGenre;
 };
