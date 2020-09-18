@@ -6,11 +6,11 @@ const assertEqual = function(actual, expected)
     return console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
 };
 
-function countLetters(inputString)
+function countLetters(inputStr)
 {
   let countedLetters = {};
-  let lowerCaseString = inputString.toLowerCase();
-  for (let char of lowerCaseString)
+  let lowerCaseStr = inputStr.toLowerCase();
+  for (let char of lowerCaseStr)
    {
     if (char !== " ")
      {
@@ -30,5 +30,5 @@ function countLetters(inputString)
 }
 module.exports = countLetters;
 
-//countLetters("lighthouse in the house");
-//countLetters("Shilpa Chegudi");
+countLetters("lighthouse in the house");
+countLetters("Shilpa Chegudi");
