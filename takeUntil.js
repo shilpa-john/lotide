@@ -1,4 +1,3 @@
-//Code
 function eqArrays (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -31,8 +30,6 @@ const takeUntil = function(array, callback) {
 }
 
 module.exports = takeUntil;
-
-
 
 
 //TESTS:
