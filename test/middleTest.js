@@ -1,6 +1,6 @@
+const assertEqual = require('../assertArraysEqual');
 const assert      = require('chai').assert;
 const middlefc        = require('../middle');
-
 
 describe("#middle", () => {
   it('Should return [2] when given [1, 2, 3]', () => {
